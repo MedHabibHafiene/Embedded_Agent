@@ -27,6 +27,13 @@ failed_generations/
 chroma_db/
 chroma_db_backup_*/
 
+# Persisted API job records
+data/
+
+# Scraped corpus: raw HTML cache + extracted text (rebuild via python -m scraping.run)
+scraping/raw/
+scraping/output/
+
 # PlatformIO build artifacts
 stm32_project/.pio/
 stm32_project/.cache/
@@ -41,3 +48,19 @@ stm32_project/src/stm32f4xx_it.c
 .idea/
 .DS_Store
 Thumbs.db
+
+# Vendored binaries (download OpenOCD/stlink tools separately)
+tools/
+
+# ST copyrighted documentation PDFs - do not redistribute
+documentation/
+
+# Demo/marketing assets
+presentation_video/
+
+# Scraped third-party website content (the scraper code is tracked, its output is not)
+scraping/raw/
+scraping/output/
+
+# ZCode workspace config
+.zcodeignore

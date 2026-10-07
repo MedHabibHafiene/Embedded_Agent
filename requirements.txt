@@ -1,9 +1,28 @@
+# API backend
 fastapi==0.115.0
 uvicorn==0.30.1
 pydantic==2.7.1
+
+# LLM transport (Ollama OpenAI-compatible endpoint)
 openai==3.13.0
-chromadb==0.5.3
+
+# RAG: vector store + document loading
+chromadb==1.5.9
+pypdf>=4.0
+fonttools>=4.0
+beautifulsoup4>=4.12
 python-dotenv==1.0.1
+
+# Hardware
 pyserial==3.5
-torch --index-url https://download.pytorch.org/whl/cu121
+
+# Test/utility scripts (scripts/e2e_flashing_test.py)
+requests>=2.31
+
+# Embeddings (used by sentence-transformers-based embedding functions)
 sentence-transformers==2.6.1
+
+# PyTorch CUDA wheels (index must be declared on its own line - the previous
+# inline form `torch --index-url ...` was invalid requirements syntax)
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch>=2.0
